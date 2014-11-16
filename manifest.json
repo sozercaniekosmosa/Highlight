@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"version": "0.1",
+	"name": "Highlighter",
+	"description": "Highlighter",
+	"content_scripts": [
+		{
+			"matches": [ "*://*/*" ],
+			"css": ["highlighter.css"],
+			"js": [ "highlighter.js" ],
+			"run_at": "document_end"
+		}
+	],
+	"icons" : {
+		"16" : "icon-16.png",
+		"48" : "icon-48.png",
+		"128" : "icon-128.png"
+	},
+	"browser_action": {
+		"default_title": "Highlighter",
+		"default_icon" : "icon-32.png"
+	}
+}
