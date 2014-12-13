@@ -3,6 +3,7 @@ var isHighlight = false;
 document.body.addEventListener('mousewheel', function () {
 	var select = window.getSelection() + '';
 	if ((select == '') || (select.length > 110)) return;
+	if (select == ' ') return;
 	select = select.trim();
 	var html = document.body.innerHTML.split(select).join('<x>' + select + '</x>');
 	document.body.innerHTML = html;
